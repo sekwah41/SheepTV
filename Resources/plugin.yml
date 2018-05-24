@@ -1,0 +1,14 @@
+main: com.sekwah.sheep.SheepTV
+name: SheepTV
+version: 0.0.1
+author: sekwah41
+description: SHEEEEEEP
+commands:
+    sheep:
+        description: Sheep
+        aliases: [sheeptv]
+        usage: /<command>
+permissions:
+   sheep:
+     description: Sheep
+     default: true
