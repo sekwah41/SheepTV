@@ -10,11 +10,11 @@ public class SheepScreen {
 
     private Sheep[][] pixels;
 
-    private final double offsetX = 7.2f/16f;
-    private final double offsetZ = 7.2f/16f;
+    private final double offsetX = 11.2f/16f;
+    private final double offsetZ = 21.2f/16f;
 
-    private final int sizeX = 25;
-    private final int sizeZ = 25;
+    private final int sizeX = 30;
+    private final int sizeZ = 30;
 
     private boolean isMade = false;
 
