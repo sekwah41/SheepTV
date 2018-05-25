@@ -13,8 +13,8 @@ public class SheepScreen {
     private final double offsetX = 11.2f/16f;
     private final double offsetZ = 21.2f/16f;
 
-    private final int sizeX = 30;
-    private final int sizeZ = 30;
+    private final int sizeX = 5;
+    private final int sizeZ = 70;
 
     private boolean isMade = false;
 
@@ -43,6 +43,9 @@ public class SheepScreen {
     }
 
     public void destroyScreen() {
+        if(!this.isMade) {
+            return;
+        }
         this.isMade = false;
         for (int x = 0; x < sizeX; x++) {
             for (int z = 0; z < sizeZ; z++) {
@@ -71,6 +74,19 @@ public class SheepScreen {
                 }
                 else {
 
+                    updateSheep(x,z,DyeColor.WHITE);
+                }
+            }
+        }
+    }
+
+    public void setColorLevel(float colorLevel) {
+        for (int x = 0; x < sizeX; x++) {
+            for (int z = 0; z < sizeZ; z++) {
+                if(z >= colorLevel * sizeZ) {
+                    updateSheep(x,z,DyeColor.BLACK);
+                }
+                else {
                     updateSheep(x,z,DyeColor.WHITE);
                 }
             }
